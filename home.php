@@ -11,7 +11,7 @@
 		<!-- render image gallery -->
 		<?php get_template_part( 'template-parts/image-gallery', get_post_type() ); ?>
 
-	</main>
+	</main> 
 
 <?php
 
