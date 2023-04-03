@@ -16,42 +16,17 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+		<!-- fetch header slider -->
+		<?php get_template_part('template-parts/head-slider',get_post_type());?>
 
-		<?php
-		if ( have_posts() ) :
+		<!-- fetch features section -->
+		<?php get_template_part('template-parts/features-section',get_post_type());?>
 
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
+		<!-- fetch image gallery -->
+		<?php get_template_part('template-parts/image-gallery',get_post_type());?>
 
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();
