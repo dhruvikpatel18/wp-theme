@@ -9,7 +9,7 @@
 
 	// Return early if the navigation doesn't exist.
 	if ( ! siteNavigation ) {
-		return;
+		return; 
 	}
 
 	const button = siteNavigation.getElementsByTagName( 'button' )[ 0 ];
