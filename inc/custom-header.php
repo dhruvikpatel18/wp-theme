@@ -8,39 +8,39 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package rt-assign
+ * @package Initial_Theme
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses rt_assign_header_style()
+ * @uses initial_theme_header_style()
  */
-function rt_assign_custom_header_setup() {
+function initial_theme_custom_header_setup() {
 	add_theme_support(
 		'custom-header',
 		apply_filters(
-			'rt_assign_custom_header_args',
+			'initial_theme_custom_header_args',
 			array(
 				'default-image'      => '',
 				'default-text-color' => '000000',
 				'width'              => 1000,
 				'height'             => 250,
 				'flex-height'        => true,
-				'wp-head-callback'   => 'rt_assign_header_style',
+				'wp-head-callback'   => 'initial_theme_header_style',
 			)
 		)
 	);
 }
-add_action( 'after_setup_theme', 'rt_assign_custom_header_setup' );
+add_action( 'after_setup_theme', 'initial_theme_custom_header_setup' );
 
-if ( ! function_exists( 'rt_assign_header_style' ) ) :
+if ( ! function_exists( 'initial_theme_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see rt_assign_custom_header_setup().
+	 * @see initial_theme_custom_header_setup().
 	 */
-	function rt_assign_header_style() {
+	function initial_theme_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*
