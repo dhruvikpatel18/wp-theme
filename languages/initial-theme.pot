@@ -172,7 +172,7 @@ msgstr ""
 
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
-msgstr ""
+msgstr "" 
 
 #. translators: 1: link to WP admin new post page.
 #: template-parts/content-none.php:24
