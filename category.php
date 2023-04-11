@@ -5,7 +5,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package DsignFly
+ * @package rt-assign
  */
 
 get_header();
